@@ -16,7 +16,7 @@
 
 import { getUsers, addUser } from "./users.js";
 
-window.addEventListener("load", initApp);
+window.addEventListener("DOMContentLoaded", initApp);
 
 
 function initApp() {
@@ -39,5 +39,5 @@ function displayUsers() {
 
 function displayUserItem(user) {
     // TODO: Create <li> for user and append to #userList
-    
+
 }

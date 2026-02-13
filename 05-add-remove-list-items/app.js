@@ -24,14 +24,14 @@
 // 3. Use createElement(), appendChild(), and remove() as shown in the example above.
 // 4. Use getNextItemNo() to determine the correct number for the new item.
 
-window.addEventListener("load", initApp);
+window.addEventListener("DOMContentLoaded", initApp);
 
-function initApp() {    
+function initApp() {
 	// TODO: Add event listeners to #addBtn and #removeBtn
 }
 
 function getNextItemNo() {
-    // TODO: return the number based one the current list size.
+	// TODO: return the number based one the current list size.
 }
 
 function handleAddClick() {

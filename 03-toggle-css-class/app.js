@@ -9,7 +9,7 @@
 // 4. Use classList methods: add, remove, contains, and toggle.
 // 5. Use function stubs below and complete the logic.
 
-window.addEventListener("load", initApp);
+window.addEventListener("DOMContentLoaded", initApp);
 
 function initApp() {
     // TODO: Add event listeners to #square and #circle

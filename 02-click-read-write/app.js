@@ -5,7 +5,7 @@
 // 2. Retrieve all paragraphs with class "msg" and id "message".
 // 3. Show the combined (concatenated) text content of all these elements in #output.
 
-window.addEventListener("load", initApp);
+window.addEventListener("DOMContentLoaded", initApp);
 
 function initApp() {
 	// TODO: Add event listener to #showBtn

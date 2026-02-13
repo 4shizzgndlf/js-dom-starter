@@ -1,7 +1,7 @@
-window.addEventListener('load', initApp);
+window.addEventListener('DOMContentLoaded', initApp);
 
 function initApp() {
-	// TODO: Add event listener to #toggleBtn
+    // TODO: Add event listener to #toggleBtn
     // Pass in the button element and the span to update
     // HINT: use () => handleToggle(btn, stateValueSpan) as the event handler
 }
