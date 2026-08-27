@@ -1,4 +1,3 @@
-
 // DOM classList Exercise
 // =====================
 // 1. When the page loads, set up event listeners for #square and #circle.
@@ -12,13 +11,32 @@
 window.addEventListener("DOMContentLoaded", initApp);
 
 function initApp() {
-    // TODO: Add event listeners to #square and #circle
+  // TODO: Add event listeners to #square and #circle
+  const square = document.querySelector("#square");
+  const circle = document.querySelector("#circle");
+
+  square.addEventListener("click", handleSquareClick);
+  circle.addEventListener("click", handleCircleClick);
 }
 
 function handleSquareClick() {
-    // TODO: Toggle the "tilt" class on #square
+  // TODO: Toggle the "tilt" class on #square
+  square.classList.toggle("tilt");
+  if (square.classList.contains("size")) {
+      square.classList.remove("size");
+  } else {
+    square.classList.add("size");
+  }
 }
 
 function handleCircleClick() {
-    // TODO: Toggle the "move" class on #circle
+  // TODO: Toggle the "move" class on #circle
+  circle.classList.toggle("move");
+  if (circle.classList.contains("size")) {
+      circle.classList.remove("size");
+  } else {
+    circle.classList.add("size");
+  }
 }
+
+initApp();

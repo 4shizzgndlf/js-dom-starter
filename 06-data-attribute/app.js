@@ -1,14 +1,35 @@
-window.addEventListener('DOMContentLoaded', initApp);
+window.addEventListener("DOMContentLoaded", initApp);
 
 function initApp() {
-    // TODO: Add event listener to #toggleBtn
-    // Pass in the button element and the span to update
-    // HINT: use () => handleToggle(btn, stateValueSpan) as the event handler
+  // TODO: Add event listener to #toggleBtn
+  // Pass in the button element and the span to update
+  // HINT: use () => handleToggle(btn, stateValueSpan) as the event handler
+  const btn = document.querySelector("#toggleBtn");
+  const stateValueSpan = document.querySelector("#stateValue");
+
+  btn.addEventListener("click", () => handleToggle(btn, stateValueSpan));
 }
 
 function handleToggle(btn, stateValueSpan) {
-    // TODO: get the attribute 'data-state' of btn
-    // If it's 'off', change it to 'on'. If it's 'on', change it to 'off'.
-    // Update the text content of stateValueSpan to show the current state.
-    // Also, toggle the class 'on' on btn when state is 'on', remove it when 'off'.
+  // TODO: get the attribute 'data-state' of btn
+  // If it's 'off', change it to 'on'. If it's 'on', change it to 'off'.
+  // Update the text content of stateValueSpan to show the current state.
+  // Also, toggle the class 'on' on btn when state is 'on', remove it when 'off'.
+  const currentState = btn.getAttribute("data-state");
+
+    if (currentState === "off") {
+        btn.setAttribute("data-state", "on");
+    } else {
+        btn.setAttribute("data-state", "off");
+    }
+
+    const newState = btn.getAttribute("data-state");
+
+    stateValueSpan.textContent = newState;
+
+    if (newState === "on") {
+        btn.classList.add("on");
+    } else {
+        btn.classList.remove("on");
+    }
 }
